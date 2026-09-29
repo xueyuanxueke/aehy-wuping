@@ -33,6 +33,10 @@
  #legend{position:absolute;left:12px;bottom:12px;background:#000b;padding:7px 11px;border-radius:6px;font-size:13px;color:#cde}
  #legend .row{display:flex;align-items:center;gap:7px;margin-top:3px}
  #legend .chip{width:13px;height:13px;border-radius:50%;border:1.5px solid #fff;flex:none;box-shadow:0 1px 2px #000a}
+ #legend input.chip{width:16px;height:16px;padding:0;border:1.5px solid #fff;border-radius:50%;background:none;cursor:pointer;flex:none}
+ #legend input.chip::-webkit-color-swatch-wrapper{padding:0}
+ #legend input.chip::-webkit-color-swatch{border:none;border-radius:50%}
+ #legend .szin{width:32px;padding:1px 2px;font-size:11px;background:#262e32;color:#dde;border:1px solid #3a444a;border-radius:3px;text-align:center;flex:none}
  #sideBtn{display:none}
  #card{position:absolute;left:10px;right:10px;bottom:60px;background:rgba(4,14,18,.9);border:1px solid #3a444a;border-radius:8px;padding:9px 34px 9px 12px;font-size:13px;line-height:1.6;display:none;z-index:25}
  #cardX{position:absolute;right:4px;top:2px;color:#9ab;font-size:15px;padding:6px 9px;cursor:pointer}
@@ -81,7 +85,8 @@ const MAXSEL = 5;
 const view = document.getElementById('view'), world = document.getElementById('world');
 const tip = document.getElementById('tip');
 const BACK_IMG = "地图图片/dituBack.png";  // 可开关的羊皮纸背景图
-const app = { map: null, scale: 1, tx: 0, ty: 0, marks: [], active: [], showBack: (() => { try { return localStorage.getItem('aehyShowBack') !== '0'; } catch(e){ return true; } })() };   // active: 摆放id(字符串), 按选择顺序, 最多5
+const app = { map: null, scale: 1, tx: 0, ty: 0, marks: [], active: [], showBack: (() => { try { return localStorage.getItem('aehyShowBack') !== '0'; } catch(e){ return true; } })(),
+ custom: (() => { try { return JSON.parse(localStorage.getItem('aehyCustom') || '{}'); } catch(e){ return {}; } })() };   // active: 摆放id(字符串), 按选择顺序, 最多5
 
 function applyT(){ world.style.transform = `translate(${app.tx}px,${app.ty}px) scale(${app.scale})`; }
 function fit(){
@@ -190,6 +195,18 @@ function flashHint(msg){
 function topIds(k){
   return Object.entries(app.map.items).sort((a,b) => b[1].count - a[1].count).slice(0, k).map(e => e[0]);
 }
+// ---------- 每种物资的自定义颜色/大小(浏览器本地记忆) ----------
+function saveCustom(){
+  try { localStorage.setItem('aehyCustom', JSON.stringify(app.custom)); } catch(e){}
+}
+function itemColor(id, ci){
+  const c = app.custom[id];
+  return (c && c.col) || COLORS[ci];
+}
+function itemSize(id){
+  const c = app.custom[id];
+  return (c && c.sz) ? c.sz : 5;
+}
 function refresh(){
   const [w, h, l, r, t, b] = app.map.prm;
   for (const el of app.marks) el.remove();
@@ -202,7 +219,9 @@ function refresh(){
     shown++;
     const d = document.createElement('div');
     d.className = 'mk';
-    d.style.background = COLORS[ci];
+    d.style.background = itemColor(String(it.id), ci);
+    const dsz = itemSize(String(it.id));
+    if (dsz !== 5){ d.style.width = dsz + 'px'; d.style.height = dsz + 'px'; }
     const mx = w * (it.x - (l + r) / 2) / (r - l);
     const my = h * (it.z - (t + b) / 2) / (t - b);
     d.style.left = ((mx + w / 2) / w * app.map.tw) + 'px';
@@ -219,9 +238,34 @@ function refresh(){
     ? app.active.map(id => {
         const it = app.map.items[id];
         const ci = app.active.indexOf(id);
-        return `<div class="row"><span class="chip" style="background:${COLORS[ci]}"></span>${it.nm} <span style="color:#789">#${id}</span> <span style="color:#8aa">×${it.count}</span></div>`;
-      }).join('')
+        return `<div class="row">` +
+          `<input type="color" class="chip" value="${itemColor(id, ci)}" data-id="${id}" title="点击修改颜色">` +
+          `<input type="number" class="szin" min="3" max="20" step="1" value="${itemSize(id)}" data-id="${id}" title="圆点大小(px)">` +
+          `${it.nm} <span style="color:#789">#${id}</span> <span style="color:#8aa">×${it.count}</span></div>`;
+      }).join('') +
+      (app.active.some(id => app.custom[id])
+        ? '<div class="row"><a href="javascript:void(0)" id="resetCustom" style="color:#789;font-size:12px">↺ 恢复默认样式</a></div>'
+        : '')
     : '<div style="color:#789">选择物资后显示圆点（最多5种）</div>';
+  document.querySelectorAll('#legend input[type="color"]').forEach(inp => {
+    inp.oninput = () => {
+      (app.custom[inp.dataset.id] = app.custom[inp.dataset.id] || {}).col = inp.value;
+      saveCustom(); buildList(); refresh();
+    };
+  });
+  document.querySelectorAll('#legend .szin').forEach(inp => {
+    inp.onchange = () => {
+      const v = Math.max(3, Math.min(20, +inp.value || 5));
+      inp.value = v;
+      (app.custom[inp.dataset.id] = app.custom[inp.dataset.id] || {}).sz = v;
+      saveCustom(); refresh();
+    };
+  });
+  const rb = document.getElementById('resetCustom');
+  if (rb) rb.onclick = () => {
+    for (const id of app.active) delete app.custom[id];
+    saveCustom(); refresh();
+  };
   document.getElementById('stat').textContent = `显示 ${shown} / ${app.map.rows.length} · 已选 ${app.active.length}/${MAXSEL}`;
 }
 function toggleSel(id){
@@ -243,7 +287,7 @@ function buildList(){
     d.className = 'item' + (sel ? ' sel' : ' off');
     const im = info.icon ? `<img loading="lazy" src="${ICON_BASE}/${info.icon}" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='${FALLBACK_ICON_BASE}/${info.icon}'}else{this.replaceWith(Object.assign(document.createElement('span'),{style:'width:26px;text-align:center',textContent:'?'}))}">` : '<span style="width:26px;text-align:center">?</span>';
     const ci = app.active.indexOf(id);
-    const cd = sel ? `<span class="cdot" style="background:${COLORS[ci]}"></span>` : '<span class="cdot" style="background:transparent;border-color:#456"></span>';
+    const cd = sel ? `<span class="cdot" style="background:${itemColor(id, ci)}"></span>` : '<span class="cdot" style="background:transparent;border-color:#456"></span>';
     d.innerHTML = `${cd}${im}<span>${info.nm}</span><span class="wid">#${id}</span><span class="cnt">×${info.count}</span>`;
     d.onclick = () => { if (toggleSel(id)) buildList(), refresh(); };
     list.appendChild(d);
@@ -317,7 +361,7 @@ function loadMap(lv){
   fit(); refresh();
   const lg = document.getElementById('legend');
   const range = `${sc.name} · 世界范围 x[${sc.prm[2]}, ${sc.prm[3]}] z[${sc.prm[5]}, ${sc.prm[4]}]`;
-  lg.innerHTML = `<div style="color:#9ab;margin-bottom:2px">${range}</div>` + lg.innerHTML;
+  lg.insertAdjacentHTML('afterbegin', `<div style="color:#9ab;margin-bottom:2px">${range}</div>`);
 }
 const sel = document.getElementById('mapSel');
 for (const lv of Object.keys(SCENES)) {
