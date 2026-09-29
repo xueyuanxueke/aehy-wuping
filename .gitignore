@@ -1,0 +1,6 @@
+# 维护工具与原版备份(非展示文件)。如需纳入版本管理, 删除下一行即可
+pythonTool/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
