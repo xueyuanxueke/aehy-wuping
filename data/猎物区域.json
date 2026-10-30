@@ -182,13 +182,13 @@
   "445": {
    "en": "TujiuObj",
    "zh": "秃鹫",
-   "icon": null,
+   "icon": "tujiuIcon.png",
    "nameSrc": "official"
   },
   "446": {
    "en": "CitunshuObj",
    "zh": "刺豚鼠",
-   "icon": null,
+   "icon": "citunshuIcon.png",
    "nameSrc": "official"
   },
   "449": {
