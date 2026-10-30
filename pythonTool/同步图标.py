@@ -12,7 +12,7 @@ import shutil
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE) if os.path.basename(HERE) == "pythonTool" else HERE
-CSV = os.path.join(ROOT, "物资映射.csv")
+CSV = os.path.join(ROOT, "data", "物资映射.csv")
 ASSET_DIRS = [os.path.join(ROOT, "..", "assets", "Sprite"),
               os.path.join(ROOT, "..", "assets", "Texture2D")]
 OUT_DIR = os.path.join(ROOT, "wupingIcon")

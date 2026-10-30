@@ -21,7 +21,7 @@ def apply_patches(html):
         html,
         'const ICON_BASE = "../assets/Texture2D";',
         'const ICON_BASE = "../assets/Texture2D";\n'
-        'const CSV_URL = "物资映射.csv";   // 外部映射表: 编号,名称,英文名,预制体,图标\n'
+        'const CSV_URL = "data/物资映射.csv";   // 外部映射表: 编号,名称,英文名,预制体,图标\n'
         "let GLOBAL_ITEMS = null;          // CSV 加载成功后的全局映射; null = 用内置映射",
         marker="const CSV_URL",
     )

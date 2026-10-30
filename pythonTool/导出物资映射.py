@@ -9,7 +9,7 @@ import json
 import re
 
 HTML = "物资地图.html"
-CSV = "物资映射.csv"
+CSV = "data/物资映射.csv"
 
 with open(HTML, encoding="utf-8") as f:
     content = f.read()
