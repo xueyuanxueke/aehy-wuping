@@ -102,11 +102,11 @@
 241,,,,
 242,,Quchong,,
 243,,Pobu,,
-244,美洲豹,,,
-245,刺豚鼠,,Prefab/Animals/CitunshuHome,
-246,招潮蟹,,Prefab/Animals/ZhaochaoxieHome,
-247,秃鹫,,Prefab/Animals/TujiuHome,
-248,兔豚鼠,,Prefab/Animals/TutunshuHome,
+244,美洲豹,,iconui/meizhoubaoicon,meizhoubaoIcon.png
+245,刺豚鼠,,Prefab/Animals/CitunshuHome,citunshuIcon.png
+246,招潮蟹,,Prefab/Animals/ZhaochaoxieHome,zhaochaoxieFresh.png
+247,秃鹫,,Prefab/Animals/TujiuHome,tujiuIcon.png
+248,兔豚鼠,,Prefab/Animals/TutunshuHome,tutunshuObj.png
 249,乌鸦,,Prefab/Animals/WuyaHome,wuyaObj.png
 250,青蛙,,Prefab/Animals/FrogHome,FrogObj.png
 251,鱼,,Prefab/Animals/FishHome,FishMeatFresh.png
@@ -114,7 +114,7 @@
 253,兔子,,Prefab/Animals/TuziHome,tuziObj.png
 254,狼,,Prefab/Animals/WolfHome,wolfIcon.png
 255,四脚蛇,,Prefab/Animals/SijiaosheHome,sijiaosheObj.png
-256,鬣狗,,,liegouIcon.png
+256,鬣狗,,iconui/liegouicon,liegouIcon.png
 257,海鲈鱼,,Prefab/Animals/SeaLuyuHome,SeaLuyuFresh.png
 258,螃蟹,,Prefab/Animals/PangxieHome,pangxieFresh.png
 259,椰子蟹,,Prefab/Animals/YezixieHome,yezixieFresh.png
@@ -129,7 +129,7 @@
 268,鲳鱼,,Prefab/Animals/ChangyuHome,chanyuIcon.png
 269,蝎子,,Prefab/Animals/XieziHome,xieziObj.png
 270,蜥蜴,,Prefab/Animals/XiyiHome,xiyiObj.png
-271,竹子精,,Prefab/Animals/ZhuziHome,
+271,竹子精,,Prefab/Animals/ZhuziHome,sactx-0-128x256-Uncompressed-ZhuziGuaiAlts-bc4b99a8.png
 272,乌贼,,Prefab/Animals/WuzeiHome,youyuFresh.png
 273,剑鱼,,Prefab/Animals/JianyuHome,
 274,松鼠,,Prefab/Animals/SongshuHome,songshuIcon.png
@@ -153,10 +153,10 @@
 292,,YibeiCanEat,,
 293,,Jueleigen,,
 294,河鳟,,Prefab/Animals/HezunHome,
-295,美洲狮,,,
-296,湍鸭,,Prefab/Animals/TuanyaHome,
-298,鲶鱼,,Prefab/Animals/NianyuChangeHome,
-299,变体泥潭,,Prefab/GrassBig/ChangeNitu,
+295,美洲狮,,iconui/meizhoushiicon,meizhoushiIcon.png
+296,湍鸭,,Prefab/Animals/TuanyaHome,tuanyaIcon.png
+298,鲶鱼[亚马逊],,Prefab/Animals/NianyuChangeHome,
+299,种植坑[亚马逊],,Prefab/GrassBig/ChangeNitu,
 300,胡萝卜,Huluobo,Prefab/Food/Huluobo,huluoboIcon.png
 301,土豆根茎,SeedTudou,Prefab/Food/Tudou,seedtudou.png
 302,烤鸡腿,Jitui,Prefab/Food/Jitui,jituiIcon.png
@@ -205,7 +205,7 @@
 410,巴西坚果[地上],BaxiJianguo,Prefab/Food/FloorBaxijianguo,baxiJianguoIcon.png
 411,巴西坚果,BaxiJianguo,Prefab/Tree/Baxijianguo,baxiJianguoIcon.png
 412,芭蕉,Bajiao,Prefab/Tree/BajiaoTree,bajiaoIcon.png
-413,巨型睡蓮,Shuilian,Prefab/Grass/Shuilian,
+413,巨型睡蓮,Shuilian,Prefab/Grass/Shuilian,shuilianIcon.png
 460,,Yinleizhen,,
 461,,DituCanpian1,,
 462,,DituCanpian2,,
@@ -250,4 +250,4 @@
 1100,宝箱,,Prefab/Stone/Baoxiang,baoxiangbottom.png
 1152,噩梦玫瑰,,Prefab/HideTask/Saint2/DreamMeigui,meigui.png
 1203,博茨瓦纳桃树,,Prefab/HideTask/StrangeStone/BociwanaTaoshu,taoziIcon.png
-1215,猪笼草,,Prefab/HideTask/Huwan/ZhulongcaoWaterWupi,
+1215,猪笼草,,Prefab/HideTask/Huwan/ZhulongcaoWaterWupi,zhulongcao2.png
