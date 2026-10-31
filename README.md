@@ -236,11 +236,44 @@ py = (top  - z)  / (top   - bottom) * th;   // th = 底图像素高
 
 **新版本新增物资/猎物**（游戏更新后，存档里出现了不认识的编号）：
 
-1. `python pythonTool/导出物资名称.py --version-dir <新版本目录>` 重新解出名称表（同时刷新 `data/物资名称.csv` 与 `place_out/wuping_names.json`）；
+1. `python pythonTool/导出物资名称.py --version-dir <新版本目录> --csv data/物资名称.csv` 重新解出名称表（默认写 `place_out/wuping_names.json`，加 `--csv` 才刷新 `data/物资名称.csv`）；
 2. `python pythonTool/补充新物资条目.py --dry` 先看一眼会补哪些（只读）；
 3. 去掉 `--dry` 正式写入，`data/物资映射.csv` 会多出「只有编号 + 英文名」的行；
 4. `python pythonTool/导出物资名称.py --fill-csv data/物资映射.csv` 按编号把这些空名称批量填上（只填空、可重复跑）；
 5. `python pythonTool/同步图标.py` 补齐图标后提交。
+
+**游戏版本更新（整套数据重跑，顺序不能乱）**：
+
+```bash
+# 0) Il2CppDumper 对新版 libil2cpp.so + global-metadata.dat 出 dump
+#    （script.json / stringliteral.json / dump.cs → <版本目录>/Il2CppDumper-out/）
+
+# 1) 物品名称表（Wuping → 图标/简中/繁中/英文/描述）
+python pythonTool/导出物资名称.py --version-dir <版本目录> --csv data/物资名称.csv
+
+# 2) 物件 id → 预制体（可 --compare 与当前表比对，交集应全一致）
+python pythonTool/导出预制体映射.py --version-dir <版本目录> --compare data/预制体映射.json
+
+# 3) 物品 → 物件 id 数组（在 mod 仓库里）
+python ../aehy-mod-master/tools/export_couldfind.py --version-dir <版本目录>
+
+# 4) 每关底图世界矩形（有新图/换底图必须重跑；--apply 回写 PLACES）
+python pythonTool/导出地图矩形.py --meta <版本目录>/global-metadata.dat --apply
+
+# 5) 物资点位（需要新存档 db）
+python pythonTool/导出物资位置.py
+
+# 6) 物件↔物品/变体对照表
+python pythonTool/导出物件变体.py
+
+# 7) 名称统一修订（先 --dry 预演）
+python pythonTool/修订物资映射.py --dry && python pythonTool/修订物资映射.py
+
+# 8) 体检：图外必须 0
+python pythonTool/校验底图对齐.py
+```
+
+依赖关系：6 依赖 2/3，7 依赖 6，5 依赖 4。解不出来的新编号按 §「编号是哪一套 id」判断身份（查 `data/预制体映射.json` 的预制体名，再用中文字面量反查），原理、校验与踩坑清单见 `文档/逆向_版本更新手册.md`。
 
 **更新猎物区域数据**（游戏版本更新后）：
 
@@ -251,4 +284,4 @@ py = (top  - z)  / (top   - bottom) * th;   // th = 底图像素高
 
 ## 数据来源
 
-地图与摆放坐标来自游戏存档数据库 `data/marooned_with_ed.db`；物资编号/预制体/图标来自游戏资源（`assets/Sprite` 与 `assets/Texture2D`）；物资名称/描述（简繁英）由 `BuildUtil$$.cctor` 的 `cailiaoSpriteMap` 初始化代码反汇编还原（`pythonTool/导出物资名称.py`）；猎物活动区由 `libil2cpp.so` 的 `BasePlace.ListAnimalZone()` 反汇编还原（方法见 `文档/逆向_陷阱与猎物区域/`）。仅供学习交流。
+地图与摆放坐标来自游戏存档数据库 `data/marooned_with_ed.db`；物资编号/预制体/图标来自游戏资源（`assets/Sprite` 与 `assets/Texture2D`）；物资名称/描述（简繁英）由 `BuildUtil$$.cctor` 的 `cailiaoSpriteMap` 反汇编还原（`pythonTool/导出物资名称.py`）；物件 id → 预制体由 `PlaceConstants$$.cctor` 的 `prefabMap` 还原（`pythonTool/导出预制体映射.py`）；底图世界矩形由 `Constants.sceneDituWHMap` 还原（`pythonTool/导出地图矩形.py`）；猎物活动区由 `libil2cpp.so` 的 `BasePlace.ListAnimalZone()` 反汇编还原（方法见 `文档/逆向_陷阱与猎物区域/`）。仅供学习交流。
