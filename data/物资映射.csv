@@ -98,11 +98,11 @@
 197,海带,Haidai,Prefab/Food/Haidai,haidaiIcon.png
 201,坚硬的石头,SharpStone,Prefab/Stone/SharpStone,fengliStoneCailiao.png
 202,石头,ThrowStone,Prefab/Build/ThrowStone,ThrowStone.png
-240,,Bingjing6,,
-241,,,,
-242,蛆虫,Quchong,,
-243,破布,Pobu,,
-244,美洲豹,,iconui/meizhoubaoicon,meizhoubaoIcon.png
+240,土狼[地面巢],TulangHome,Prefab/Animals/TulangHome,
+241,珍珠鸡[地面巢],ZhenzhujiHome,Prefab/Animals/ZhenzhujiHome,
+242,罗非鱼[地面巢],LuofeiyuChangeHome,Prefab/Animals/LuofeiyuChangeHome,
+243,胡鲶[地面巢],HuNianChangeHome,Prefab/Animals/HuNianChangeHome,
+244,美洲豹[地面巢],BaoHome,Prefab/Animals/BaoHome,meizhoubaoIcon.png
 245,刺豚鼠[地面巢],CitunshuHome,Prefab/Animals/CitunshuHome,citunshuIcon.png
 246,招潮蟹[地面巢],ZhaochaoxieHome,Prefab/Animals/ZhaochaoxieHome,zhaochaoxieFresh.png
 247,秃鹫[地面巢],TujiuHome,Prefab/Animals/TujiuHome,tujiuIcon.png
@@ -198,8 +198,8 @@
 338,苋菜,LudouGrass,,
 339,野菠菜,LudouGuoshi,,
 340,象足西番莲,Wuhuaguo,,
-341,,JijuxieFresh,,
-345,,DieJuxi,,
+341,岩块,Yankuai,Prefab/Stone/Yankuai,
+345,犀牛[地面巢],XiniuHome,Prefab/Animals/XiniuHome,
 407,奎宁,Kuining,Prefab/GrassBig/GrassKuining,kuiningIcon.png
 408,巴西莓,Baximei,Prefab/Tree/BaximeiTree,baximeiUI.png
 410,巴西坚果[地面],BaxiJianguo,Prefab/Food/FloorBaxijianguo,baxiJianguoIcon.png

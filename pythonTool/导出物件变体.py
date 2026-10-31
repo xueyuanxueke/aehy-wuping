@@ -37,7 +37,11 @@ ROOT = os.path.dirname(HERE)                                  # 物资一览/
 BASE = os.path.dirname(ROOT)                                  # 仓库根
 PO = os.path.join(BASE, "aehy-mod-master", "tools", "place_out")
 
-PREFAB_MAP = os.path.join(PO, "prefab_map.json")               # 物件 id → 预制体
+# 物件 id → 预制体：优先用本仓库内由 导出预制体映射.py 生成的新表（含新版本新增 id），
+# 没有才退回 place_out/prefab_map.json（260109 旧表，缺 237-244 / 334-341 / 345 等 36 个 id）
+PREFAB_MAP_LOCAL = os.path.join(ROOT, "data", "预制体映射.json")
+PREFAB_MAP = (PREFAB_MAP_LOCAL if os.path.exists(PREFAB_MAP_LOCAL)
+              else os.path.join(PO, "prefab_map.json"))
 COULDFIND = os.path.join(PO, "couldfind_map.json")              # 物品 → 物件 id[]
 NAMES = os.path.join(PO, "wuping_names.json")                   # 物品 id → [图标,简中,繁中,英,...]
 CSV_IN = os.path.join(ROOT, "data", "物资映射.csv")              # 物件 id → 名称/预制体/图标
@@ -125,7 +129,10 @@ def main(argv=None):
     ap.add_argument("--dry", action="store_true", help="只统计不写文件")
     a = ap.parse_args(argv)
 
-    prefab = {int(k): v for k, v in json.load(open(PREFAB_MAP, encoding="utf-8")).items() if v}
+    _pf = json.load(open(PREFAB_MAP, encoding="utf-8"))
+    _pf = _pf.get("prefabs", _pf)                     # 新表是 {"meta":..., "prefabs":{...}}
+    prefab = {int(k): v for k, v in _pf.items() if v}
+    print("预制体表：%s（%d 条）" % (os.path.relpath(PREFAB_MAP, BASE), len(prefab)))
     couldfind = {int(k): v for k, v in json.load(open(COULDFIND, encoding="utf-8")).items()}
     names = json.load(open(NAMES, encoding="utf-8"))
     id2item = {}
