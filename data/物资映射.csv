@@ -156,7 +156,7 @@
 295,美洲狮,,iconui/meizhoushiicon,meizhoushiIcon.png
 296,湍鸭[地面巢],TuanyaHome,Prefab/Animals/TuanyaHome,tuanyaIcon.png
 298,鲶鱼[亚马逊],NianyuChangeHome,Prefab/Animals/NianyuChangeHome,
-299,种植坑[亚马逊],ChangeNitu,Prefab/GrassBig/ChangeNitu,
+299,变化的泥土坑[雨季/旱季],ChangeNitu,Prefab/GrassBig/ChangeNitu,
 300,胡萝卜,Huluobo,Prefab/Food/Huluobo,huluoboIcon.png
 301,土豆,SeedTudou,Prefab/Food/Tudou,seedtudou.png
 302,烤鸡腿,Jitui,Prefab/Food/Jitui,jituiIcon.png
