@@ -39,7 +39,7 @@
  #sideBtn{display:none}
  #card{position:absolute;left:10px;right:10px;bottom:60px;background:rgba(4,14,18,.9);border:1px solid #3a444a;border-radius:8px;padding:9px 34px 9px 12px;font-size:13px;line-height:1.6;display:none;z-index:25}
  #cardX{position:absolute;right:4px;top:2px;color:#9ab;font-size:15px;padding:6px 9px;cursor:pointer}
- @media (max-width:760px){
+ @media (max-width:900px),(max-height:520px){
   #sideBtn{display:inline-block;padding:6px 12px}
   #bar{padding:6px 8px;gap:6px}
   #bar button,#bar select,#bar input{font-size:14px;padding:6px 10px}
@@ -68,6 +68,19 @@
       background-image:linear-gradient(#1b2226 1px,transparent 1px),linear-gradient(90deg,#1b2226 1px,transparent 1px);
       background-size:40px 40px}
 </style>
+<style id="fixStyle">
+ /* ---- 窄屏 / 横屏（矮视口）侧栏折叠修正 ---- */
+ #sideX{display:none}
+ @media (max-width:900px),(max-height:520px){
+  #side{position:absolute;z-index:30;top:0;bottom:0;left:0;width:min(80vw,320px);
+        transform:translateX(-103%);transition:transform .22s;box-shadow:6px 0 20px #000b}
+  #side.open{transform:none}
+  #side.open #searchBox{width:calc(100% - 60px)}
+  #sideX{display:block;position:absolute;right:8px;top:8px;z-index:2;
+         background:#33404c;color:#cde;border:1px solid #46545f;border-radius:4px;
+         padding:2px 9px;font-size:14px;line-height:1.4;cursor:pointer}
+ }
+</style>
 </head><body>
 <div id="app">
  <div id="bar">
@@ -81,7 +94,7 @@
   <span class="hint" style="color:#678">滚轮/双指缩放 · 拖拽平移 · 悬停或点圆点看详情 · 点左侧条目选物资(最多5种) · 双击放大</span>
  </div>
  <div id="main">
-  <div id="side"><input id="searchBox" placeholder="搜索物品名…"><div id="list"></div></div>
+  <div id="side"><button id="sideX" title="关闭">✕</button><input id="searchBox" placeholder="搜索物品名…"><div id="list"></div></div>
   <div id="view"><div id="world"></div>
    <div id="zoomctl"><button id="zin">＋</button><button id="zout">－</button><button id="zfit">⤢</button></div>
    <div id="legend"></div>
@@ -808,6 +821,37 @@ async function loadWupingData() {
   if (n >= 0) { rebuildMapSel(); applyMap(); }
 })();
 /*===WUP_END===*/
+/*===FIX_BEGIN===*/
+/* 窄屏侧栏 / 切图残留选择 修正（由 pythonTool/修复HTML_移动端与切图.py 注入，请勿手改） */
+(function () {
+  // 1) 切换地图后清掉当前图里不存在的猎物选择
+  const origRender = renderZones;
+  renderZones = function () {
+    const pl = zPlace(document.getElementById('mapSel').value);
+    const keys = new Set(pl ? pl.animals.map(a => a.key) : []);
+    const kept = zoneSel.filter(k => keys.has(k));
+    if (kept.length !== zoneSel.length) zoneSel = kept;
+    return origRender.apply(this, arguments);
+  };
+
+  // 2) 折叠模式下侧栏可关闭：✕ 按钮 + 点地图空白处收起
+  const side = document.getElementById('side');
+  const viewEl = document.getElementById('view');
+  const closeSide = () => side.classList.remove('open');
+  const x = document.getElementById('sideX');
+  if (x) x.onclick = e => { e.stopPropagation(); closeSide(); };
+  if (viewEl) viewEl.addEventListener('click', e => {
+    if (!side.classList.contains('open')) return;
+    const t = e.target;
+    if (t && t.closest && (t.closest('.zbox') || t.closest('.mk'))) return;
+    closeSide();
+  });
+  try {
+    matchMedia('(max-width:900px),(max-height:520px)')
+      .addEventListener('change', e => { if (!e.matches) closeSide(); });
+  } catch (e) { /* 老浏览器忽略 */ }
+})();
+/*===FIX_END===*/
 (async () => {
   renderBackBtn();
   const ok = await loadGlobalItems();
