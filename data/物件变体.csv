@@ -244,7 +244,7 @@
 250,Prefab/Animals/FrogHome,地面巢,青蛙[地面巢],,,,102
 251,Prefab/Animals/FishHome,地面巢,鱼[地面巢],,,,8
 252,Prefab/Animals/BirdHome,地面巢,鸟[地面巢],,,,884
-253,Prefab/Animals/TuziHome,地面巢,兔子[地面巢],,,,16
+253,Prefab/Animals/TuziHome,地面巢,野兔[地面巢],,,,16
 254,Prefab/Animals/WolfHome,地面巢,狼[地面巢],,,,25
 255,Prefab/Animals/SijiaosheHome,地面巢,四脚蛇[地面巢],,,,112
 256,Prefab/Animals/LiegouHome,地面巢,鬣狗,,,,16
@@ -258,7 +258,7 @@
 264,Prefab/Animals/LuyuHome,地面巢,鲈鱼[地面巢],,,,11
 265,Prefab/Animals/TuboshuHome,地面巢,土拨鼠[地面巢],,,,20
 266,Prefab/Animals/BearHome,地面巢,棕熊,,,,48
-267,Prefab/Animals/SnakeHome,地面巢,蛇[地面巢],,,,102
+267,Prefab/Animals/SnakeHome,地面巢,蝮蛇[地面巢],,,,102
 268,Prefab/Animals/ChangyuHome,地面巢,鲳鱼[地面巢],,,,203
 269,Prefab/Animals/XieziHome,地面巢,蝎子[地面巢],,,,67
 270,Prefab/Animals/XiyiHome,地面巢,蜥蜴[地面巢],,,,33
@@ -273,9 +273,9 @@
 279,Prefab/Animals/SanwenyuHome,地面巢,三文鱼[地面巢],,,,14
 280,Prefab/Animals/SnowTuziHome,雪地+地面巢,雪兔[雪地+地面巢],,,,21
 281,Prefab/Animals/JijuxieHome,地面巢,寄居蟹[地面巢],,,,49
-282,Prefab/Animals/ChujiHome,地面巢,雉鸡[地面巢],,,,33
-283,Prefab/Animals/JuxiHome,地面巢,大雪块,,,,20
-284,Prefab/Animals/HuangshulangHome,地面巢,黄鼠狼[地面巢],,,,39
+282,Prefab/Animals/ChujiHome,地面巢,麝雉[地面巢],,,,33
+283,Prefab/Animals/JuxiHome,地面巢,巨蜥[地面巢],,,,20
+284,Prefab/Animals/HuangshulangHome,地面巢,黄鼬[地面巢],,,,39
 285,Prefab/Animals/ShirenyuHome,地面巢,食人鱼[地面巢],,,,116
 286,Prefab/Animals/MiguanHome,地面巢,蜜獾[地面巢],,,,10
 287,Prefab/Animals/HemaHome,地面巢,河马[地面巢],,,,11
@@ -284,7 +284,7 @@
 290,Prefab/Animals/FrogHqHome,地面巢,青蛙[地面巢],,,,32
 291,Prefab/Animals/TanglangxiaHome,地面巢,螳螂虾[地面巢],,,,35
 292,Prefab/Animals/LangzhuHome,地面巢,狼蛛[地面巢],,,,24
-293,Prefab/Animals/EmoHome,地面巢,蕨类的根[地面巢],,,,26
+293,Prefab/Animals/EmoHome,地面巢,暗影恶魔[地面巢],,,,26
 294,Prefab/Animals/HezunHome,地面巢,河鳟[地面巢],,,,7
 295,Prefab/Animals/LionHome,地面巢,美洲狮,,,,9
 296,Prefab/Animals/TuanyaHome,地面巢,湍鸭[地面巢],,,,6
