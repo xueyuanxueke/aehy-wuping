@@ -1,13 +1,16 @@
 # 维护工具与原版备份（非展示文件，只在本地保留，不进仓库）
 pythonTool/
 
-# data/ 下只发布页面运行时真正 fetch 的 4 个文件，
+# data/ 下只发布页面运行时真正 fetch 的 7 个文件，
 # 其余（存档数据库、中间导出表、被内联进 HTML 的源数据）一律只在本地保留
 data/*
 !data/物资位置.json
 !data/物资映射.csv
 !data/物件变体.csv
 !data/地图矩形.json
+!data/种植坑.json
+!data/动物一览.csv
+!data/危险动物.json
 
 # 脚本自动生成的备份（修订物资映射.py 会把改名前的老表写到这里）
 data/*.bak.csv

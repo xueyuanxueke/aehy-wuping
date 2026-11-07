@@ -1,0 +1,171 @@
+﻿id,枚举名,简体名,英文名,图标,分类,猎杀陷阱可捕
+184,DieWolf,狼,Wolf,diewolf.png,动物尸体,是
+185,DieLiegou,鬣狗,Hyena,dieliegou.png,动物尸体,是
+186,DieEyu,鳄鱼,Crocodile,dieeyu.png,动物尸体,是
+187,DieBeer,棕熊,Brown Bear,diezongxiong.png,动物尸体,是
+345,DieJuxi,巨蜥,Komodo,diejuxi.png,动物尸体,是
+367,DieMiguan,蜜獾,Ratel,diemiguan.png,动物尸体,是
+370,DieHema,河马,Hippo,dieHema.png,动物尸体,是
+394,DieEmo,暗影恶魔,Shadowfiend,dieEmo.png,动物尸体,是
+422,DieLion,美洲狮,Cougar,dieMeizhoushi.png,动物尸体,是
+448,DieBao,美洲豹,Jaguar,dieMeizhoubao.png,动物尸体,是
+480,DieTulang,土狼,Aardwolf,dieTulang.png,动物尸体,是
+482,DieXiniu,犀牛,Rhinoceros,diexiniu.png,动物尸体,是
+39,SanjiBirdObj,野山鸡,Pheasant,SanjiObj.png,活体动物,
+44,TuziObj,野兔,Hare,tuziObj.png,活体动物,
+47,LaoshuObj,野鼠,Wild Rat,laoshuObj.png,活体动物,
+55,SijiaosheObj,四脚蛇,Lizard,sijiaosheObj.png,活体动物,
+56,PigObj,野猪,Wild Boar,pigObj.png,活体动物,
+58,WolfObj,狼,Wolf,wolfIcon.png,活体动物,是
+59,LiegouObj,鬣狗,Hyena,liegouIcon.png,活体动物,是
+71,HainiaoObj,海鸟,Seabird,hainiaoObj.png,活体动物,
+79,DaeyuObj,鳄鱼,Crocodile,eyuIcon.png,活体动物,是
+112,YeyaObj,野鸭,Wild Duck,yeyaObj.png,活体动物,
+131,TuboshuObj,土拨鼠,Marmot,tuboshuObj.png,活体动物,
+132,DeerObj,野鹿,Wild Deer,yeluObj.png,活体动物,
+133,BearObj,棕熊,Brown Bear,bearIcon.png,活体动物,是
+134,SnakeObj,蝮蛇,Snake,sheObjIcon.png,活体动物,
+204,KuaibaoObj,好游快爆木雕,Wood Carving,goodgameMudiaoIcon.png,活体动物,
+214,XieziObj,蝎子,Scorpion,xieziObj.png,活体动物,
+218,XiyiObj,蜥蜴,Lizard,xiyiObj.png,活体动物,
+219,YangObj,野山羊,Wild Goat,yeshanyangObj.png,活体动物,
+256,DangerShakeObj,大鲨鱼,Big Shark,bigshakeIcon.png,活体动物,
+257,SmallShakeObj,小鲨鱼,Small Shark,bigshakeIcon.png,活体动物,
+258,SongshuObj,松鼠,Squirrel,songshuIcon.png,活体动物,
+259,SongshuTreeObj,松鼠(树上),Squirrel(Tree),songshuTreeIcon.png,活体动物,
+300,SanwenyuObj,三文鱼,Salmon,sanwenyuIcon.png,活体动物,
+303,SnowTuziObj,雪兔,Snow Hare,snowtuziIcon.png,活体动物,
+304,SnowHuliObj,雪狐,Snow Fox,snowHuliObj.png,活体动物,
+305,XunluObj,驯鹿,Reindeer,xunluObj.png,活体动物,
+328,WuyaObj,乌鸦,Crow,wuyaObj.png,活体动物,
+343,ChujiObj,麝雉,Hoatzin,chujiIcon.png,活体动物,
+344,JuxiObj,巨蜥,Komodo,juxiIcon.png,活体动物,是
+357,HuangshulangObj,黄鼬,Yellow Weasel,HuangshulangIcon.png,活体动物,
+368,MiguanObj,蜜獾,Ratel,miguanIcon.png,活体动物,是
+369,HemaObj,河马,Hippo,hemaIcon.png,活体动物,是
+371,GuofuObj,果蝠,Fruit Bat,guofuIcon.png,活体动物,
+372,LingyangObj,羚羊,Antelope,lingyangObj.png,活体动物,
+392,LangzhuObj,狼蛛,Tarantula,langzhuIcon.png,活体动物,
+393,EmoObj,暗影恶魔,Shadowfiend,emoIcon.png,活体动物,是
+395,HeliObj,河狸,Beaver,heliIcon.png,活体动物,
+421,LionObj,美洲狮,Cougar,meizhoushiIcon.png,活体动物,是
+424,TuanyaObj,湍鸭,Torrent Duck,tuanyaIcon.png,活体动物,
+425,TunshuObj,兔豚鼠,Mara,tutunshuObj.png,活体动物,
+426,YuantuoObj,原驼,Guanaco,yuantuoObj.png,活体动物,
+445,TujiuObj,秃鹫,Vulture,tujiuIcon.png,活体动物,
+446,CitunshuObj,刺豚鼠,Agouti,citunshuIcon.png,活体动物,
+447,BaoObj,美洲豹,Jaguar,meizhoubaoIcon.png,活体动物,是
+449,XituanObj,西貒,Peccary,xituanIcon.png,活体动物,
+479,ZhenzhujiObj,珍珠鸡,Guinea Fowl,zhenzhujiObj.png,活体动物,
+481,TulangObj,土狼,Aardwolf,tulangIcon.png,活体动物,是
+483,XiniuObj,犀牛,Rhinoceros,xiniuIcon.png,活体动物,是
+10,FrogMeatCanEat,烤蛙肉,Baked Frog,FrogMeatCanEat.png,熟食,
+12,FishMeatCanEat,烤鲢鱼,Baked Chub,FishMeatCanEat.png,熟食,
+14,LittleMeatCanEat,烤肉条,Small Baked Meat,LittleMeatCanEat.png,熟食,
+16,BigMeatCanEat,大块烤肉,Big Baked Meat,BigMeatCanEat.png,熟食,
+18,GreatMeatCanEat,肥美的烤肉,Tasty Baked Meat,GreatMeatCanEat.png,熟食,
+28,GrassMoguCanEat,烤蘑菇,Baked Mushroom,moguCanEat.png,熟食,
+32,JiayuCanEat,烤甲鱼,Baked Turtle,JiayuMeatCanEat.png,熟食,
+65,YunaiCanEat,烤芋艿,Baked Taros,yunaiCanEat.png,熟食,
+68,SeaLuyuCanEat,烤鲈鱼,Baked Sea Bass,SeaLuyuCanEat.png,熟食,
+70,HaixiaCanEat,烤海虾,Baked Prawn,haixiaCanEat.png,熟食,
+73,PangxieCanEat,烤螃蟹,Baked Crab,pangxieCanEat.png,熟食,
+75,YezixieCanEat,烤椰子蟹,Baked Coconut Crab,yezixieCanEat.png,熟食,
+78,DalongxiaCanEat,烤大龙虾,Baked Big Lobster,dalongxiaCanEat.png,熟食,
+105,HuangshanCanEat,烤黄鳝,Baked Eel,huangshanCanEat.png,熟食,
+107,XiaolongxiaCanEat,烤小龙虾,Baked Crayfish,xiaolongxiaCanEat.png,熟食,
+109,NianyuCanEat,烤鲶鱼,Baked Catfish,nianyuCanEat.png,熟食,
+128,LuyuCanEat,烤鲈鱼,Baked Bass,LuyuCanEat.png,熟食,
+130,AngciCanEat,烤昂刺鱼,Baked Yellow Catfish,AngciCanEat.png,熟食,
+136,SnakeMeatCanEat,烤蛇肉,Baked Snake Meat,SnakeMeatCanEat.png,熟食,
+150,YumiCanEat,烤玉米,Baked Corn,yumiCanEat.png,熟食,
+161,ShuidaoCanEat,爆米花,Baked Rice,shuidaoCanEat.png,熟食,
+207,ChangyuCanEat,烤鲳魚,Baked Butterfish,chanyuCanEat.png,熟食,
+211,TudouCanEat,烤土豆,Baked Potato,tudouCanEat.png,熟食,
+216,XieziMeatCanEat,烤蝎子肉,Baked Scorpion,xieziCanEat.png,熟食,
+247,MushuCanEat,烤木薯,Baked Cassava,mushuCanEat.png,熟食,
+249,QieziCanEat,烤茄子,Baked Eggplant,qieziCanEat.png,熟食,
+251,ShanbeiCanEat,烤扇贝,Baked Scallop,shanbeiCanEat.png,熟食,
+253,WuzeiCanEat,烤乌贼,Baked Cuttlefish,youyuCanEat.png,熟食,
+255,JianyuCanEat,烤剑鱼,Baked Swordfish,qiyuCanEat.png,熟食,
+289,JiyouguCanEat,烤鸡油菇,Baked Chanterelles,jiyouguCanEat.png,熟食,
+292,YibeiCanEat,烤贻贝肉,Baked Mussel Meat,yibeiCanEat.png,熟食,
+297,FeiyuCanEat,烤鲱鱼,Baked Herring,feiyuCanEat.png,熟食,
+299,XueyuCanEat,烤鳕鱼,Baked Cod,xueyuCanEat.png,熟食,
+316,MengguKouguCanEat,烤口蘑,Baked Tricholoma,mengguKouguCanEat.png,熟食,
+318,HeisongluJunCanEat,烤黑松露菌,Baked Black Truffle,heisonglujunCanEat.png,熟食,
+323,NiqiuCanEat,烤泥鳅,Baked Loach,niqiuCanEat.png,熟食,
+342,JijuxieCanEat,烤寄居蟹,Baked Hermit Crab,jijuxieCanEat.png,熟食,
+364,HuangyuCanEat,烤虎鱼,Baked Crimson Goby,huangyuCanEat.png,熟食,
+366,ShirenFishCanEat,烤食人鱼,Baked Piranha,shirenyuCanEat.png,熟食,
+384,WojuCanEat,烤莴笋,Baked Stem Lettuce,wosunCanEat.png,熟食,
+386,StoneFishCanEat,烤石头鱼,Baked Stonefish,shitouyuCanEat.png,熟食,
+389,TanglangxiaCanEat,烤螳螂虾,Baked Mantis Shrimp,tanglangxiaCanEat.png,熟食,
+391,BandianxiaCanEat,烤斑点虾,Baked Spot Prawn,bandianxiaCanEat.png,熟食,
+417,HezunCanEat,烤河鳟,Baked Trout,hezhunCanEat.png,熟食,
+444,ZhaochaoxieCanEat,烤招潮蟹,Baked Fiddler Crab,zhaochaoxieCanEat.png,熟食,
+466,ManyuCanEat,烤鰻魚,Baked Eel,manyuCanEat.png,熟食,
+475,LuofeiyuCanEat,烤罗非魚,Baked Tilapia,luofeiyuCanEat.png,熟食,
+476,HunianCanEat,烤胡鲶,Baked Walking Catfish,huniangCanEat.png,熟食,
+478,FeizhouFeiyuCanEat,烤肺魚,Baked Lungfish,feizhoufeiyuCanEat.png,熟食,
+9,FrogMeatFresh,蛙肉,Frog,FrogMeatFresh.png,生肉/食材,
+11,FishMeatFresh,鲢鱼,Chub,FishMeatFresh.png,生肉/食材,
+13,LittleMeatFresh,肉条,Small Meat,LittleMeatFresh.png,生肉/食材,
+15,BigMeatFresh,大块肉,Big Meat,BigMeatFresh.png,生肉/食材,
+17,GreatMeatFresh,肥美的肉,Tasty Meat,GreatMeatFresh.png,生肉/食材,
+27,GrassMoguFresh,蘑菇,Mushroom,moguFresh.png,生肉/食材,
+31,JiayuFresh,甲鱼,Green Turtle,JiayuMeatFresh.png,生肉/食材,
+64,YunaiFresh,芋艿,Taro,yunaiFresh.png,生肉/食材,
+67,SeaLuyuFresh,海鲈鱼,Sea Bass,SeaLuyuFresh.png,生肉/食材,
+69,HaixiaFresh,海虾,Prawn,haixiaFresh.png,生肉/食材,
+72,PangxieFresh,螃蟹,Crab,pangxieFresh.png,生肉/食材,
+74,YezixieFresh,椰子蟹,Coconut Crab,yezixieFresh.png,生肉/食材,
+77,DalongxiaFresh,大龙虾,Big Lobster,dalongxiaFresh.png,生肉/食材,
+104,HuangshanFresh,黄鳝,Eel,huangshanFresh.png,生肉/食材,
+106,XiaolongxiaFresh,小龙虾,Crayfish,xiaolongxiaFresh.png,生肉/食材,
+108,NianyuFresh,鲶鱼,Catfish,nianyuFresh.png,生肉/食材,
+127,LuyuFresh,鲈鱼,Bass,LuyuFresh.png,生肉/食材,
+129,AngciFresh,昂刺鱼,Yellow Catfish,AngciFresh.png,生肉/食材,
+135,SnakeMeatFresh,蛇肉,Snake Meat,SnakeMeatFresh.png,生肉/食材,
+149,YumiFresh,玉米,Corn,yumiFresh.png,生肉/食材,
+160,ShuidaoFresh,水稻,Rice,shuidaoFresh.png,生肉/食材,
+206,ChangyuFresh,鲳鱼,Butterfish,chanyuIcon.png,生肉/食材,
+210,TudouFresh,土豆,Potato,tudouFresh.png,生肉/食材,
+215,XieziMeatFresh,蝎子肉,Scorpion Meat,xieziFresh.png,生肉/食材,
+246,MushuFresh,木薯,Cassava,mushuFresh.png,生肉/食材,
+248,QieziFresh,茄子,Eggplant,qieziFresh.png,生肉/食材,
+250,ShanbeiFresh,扇贝,Scallop,shanbeiFresh.png,生肉/食材,
+252,WuzeiFresh,乌贼,Cuttlefish,youyuFresh.png,生肉/食材,
+254,JianyuFresh,剑鱼,Swordfish,qiyuFresh.png,生肉/食材,
+288,JiyouguFresh,鸡油菇,Chanterelles,jiyouguFresh.png,生肉/食材,
+291,YibeiFresh,贻贝肉,Mussel Meat,yibeiFresh.png,生肉/食材,
+296,FeiyuFresh,鲱鱼,Herring,feiyuFresh.png,生肉/食材,
+298,XueyuFresh,鳕鱼,Cod,xueyuFresh.png,生肉/食材,
+315,MengguKouguFresh,蒙古口蘑,Tricholoma,mengguKouguFresh.png,生肉/食材,
+317,HeisongluJunFresh,黑松露菌,Black Truffle,heisonglujunFreash.png,生肉/食材,
+322,NiqiuFresh,泥鳅,Loach,niqiuFresh.png,生肉/食材,
+341,JijuxieFresh,寄居蟹,Hermit Crab,jijuxieFresh.png,生肉/食材,
+363,HuangyuFresh,虎鱼,Crimson Goby,huangyuFresh.png,生肉/食材,
+365,ShirenFishFresh,食人鱼,Piranha,shirenyuFresh.png,生肉/食材,
+383,WojuFresh,莴笋,Stem Lettuce,wosunFresh.png,生肉/食材,
+385,StoneFishFresh,石头鱼,Stonefish,shitouyuFresh.png,生肉/食材,
+388,TanglangxiaFresh,螳螂虾,Mantis Shrimp,tanglangxiaFresh.png,生肉/食材,
+390,BandianxiaFresh,斑点虾,Spot Prawn,bandianxiaFresh.png,生肉/食材,
+416,HezunFresh,河鳟,Trout,hezhunFresh.png,生肉/食材,
+443,ZhaochaoxieFresh,招潮蟹,Fiddler Crab,zhaochaoxieFresh.png,生肉/食材,
+465,ManyuFresh,鳗鱼,Eel,manyuFresh.png,生肉/食材,
+473,LuofeiyuFresh,罗非鱼,Tilapia,luofeiyuFresh.png,生肉/食材,
+474,HunianFresh,胡鲶,Walking Catfish,huniangFresh.png,生肉/食材,
+477,FeizhouFeiyuFresh,肺鱼,Lungfish,feizhoufeiyuFresh.png,生肉/食材,
+188,SkinGood,优质的皮毛,Quality Fur,goodpi.png,皮/材料,
+189,SkinBad,劣质的皮毛,Poor Fur,badpi.png,皮/材料,
+190,SkinWolf,狼皮,Wolf Fur,langpi.png,皮/材料,是
+191,SkinBeer,熊皮,Bear Fur,xiongpi.png,皮/材料,是
+192,SkinEyu,鳄鱼皮,Crocodile Fur,eyupi.png,皮/材料,是
+193,BadPiyi,劣质皮衣,Inferior Clothes,badpidayi.png,皮/材料,
+194,GoodPiyi,优质皮衣,Quality Clothes,goodpidayi.png,皮/材料,
+195,WolfPiyi,狼皮大衣,Wolf Coat,langpidayi.png,皮/材料,是
+196,EyuPiyi,鳄鱼皮大衣,Crocodile Coat,eyupidayi.png,皮/材料,是
+197,BearPiyi,熊皮大衣,Bear Coat,bearpidayi.png,皮/材料,是
+437,SkinBao,豹皮,Leopard Fur,baopi.png,皮/材料,是
+438,BaoPiyi,豹皮大衣,Leopard Coat,baopidayi.png,皮/材料,是
