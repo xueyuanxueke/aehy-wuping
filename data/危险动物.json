@@ -48,19 +48,19 @@
    ],
    "unit": "米"
   },
-  "radiusNote": "半径 = AI 的 ThinkWhatToDo 里「与玩家距离超过 N 就放弃追击」的常量，按米计；radius 为 null 表示该 AI 无距离判定（伏击型，不画圈）",
+  "radiusNote": "半径 = AI 的 ThinkWhatToDo / FixedUpdate 里「距离超过 N 就放弃追击」的浮点常量（米）。狼/鬣狗 60、美洲狮/美洲豹 50、暗影恶魔 40、棕熊/犀牛/河马 35 是追击距离；鳄鱼/巨蜥 20、蜜獾/土狼 25 是回巢放弃距离（伏击型，判据同为 vsqrt+vcmp）。",
   "radiusTable": {
    "Wolf": 60.0,
    "Liegou": 60.0,
-   "Daeyu": null,
+   "Daeyu": 20.0,
    "Bear": 35.0,
-   "Juxi": null,
-   "Miguan": null,
+   "Juxi": 20.0,
+   "Miguan": 25.0,
    "Hema": 35.0,
    "Emo": 40.0,
    "Lion": 50.0,
    "Xiniu": 35.0,
-   "Tulang": null,
+   "Tulang": 25.0,
    "Bao": 50.0
   }
  },
@@ -78,7 +78,7 @@
   "Daeyu": {
    "zh": "鳄鱼",
    "ai": "DaeyuAI",
-   "radius": null
+   "radius": 20.0
   },
   "Bear": {
    "zh": "棕熊",
@@ -88,12 +88,12 @@
   "Juxi": {
    "zh": "巨蜥",
    "ai": "JuxiAI",
-   "radius": null
+   "radius": 20.0
   },
   "Miguan": {
    "zh": "蜜獾",
    "ai": "MiguanAI",
-   "radius": null
+   "radius": 25.0
   },
   "Hema": {
    "zh": "河马",
@@ -118,7 +118,7 @@
   "Tulang": {
    "zh": "土狼",
    "ai": "MiguanAI",
-   "radius": null
+   "radius": 25.0
   },
   "Bao": {
    "zh": "美洲豹",
@@ -297,7 +297,7 @@
      "code": "Daeyu",
      "zh": "鳄鱼",
      "ai": "DaeyuAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "eyuIcon.png",
      "xy": [
       [
@@ -388,7 +388,7 @@
      "code": "Daeyu",
      "zh": "鳄鱼",
      "ai": "DaeyuAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "eyuIcon.png",
      "xy": [
       [
@@ -647,7 +647,7 @@
      "code": "Daeyu",
      "zh": "鳄鱼",
      "ai": "DaeyuAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "eyuIcon.png",
      "xy": [
       [
@@ -735,7 +735,7 @@
      "code": "Daeyu",
      "zh": "鳄鱼",
      "ai": "DaeyuAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "eyuIcon.png",
      "xy": [
       [
@@ -1064,7 +1064,7 @@
      "code": "Juxi",
      "zh": "巨蜥",
      "ai": "JuxiAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "juxiIcon.png",
      "xy": [
       [
@@ -1175,7 +1175,7 @@
      "code": "Daeyu",
      "zh": "鳄鱼",
      "ai": "DaeyuAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "eyuIcon.png",
      "xy": [
       [
@@ -1224,7 +1224,7 @@
      "code": "Miguan",
      "zh": "蜜獾",
      "ai": "MiguanAI",
-     "radius": null,
+     "radius": 25.0,
      "icon": "miguanIcon.png",
      "xy": [
       [
@@ -1550,7 +1550,7 @@
      "code": "Daeyu",
      "zh": "鳄鱼",
      "ai": "DaeyuAI",
-     "radius": null,
+     "radius": 20.0,
      "icon": "eyuIcon.png",
      "xy": [
       [
@@ -1867,7 +1867,7 @@
      "code": "Tulang",
      "zh": "土狼",
      "ai": "MiguanAI",
-     "radius": null,
+     "radius": 25.0,
      "icon": "dieTulang.png",
      "xy": [
       [
