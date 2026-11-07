@@ -1,6 +1,44 @@
 {
  "meta": {
   "title": "危险动物巢穴与追击范围",
+  "nestIds": {
+   "Tulang": [
+    "240"
+   ],
+   "Bao": [
+    "244"
+   ],
+   "Wolf": [
+    "254"
+   ],
+   "Liegou": [
+    "256"
+   ],
+   "Daeyu": [
+    "261"
+   ],
+   "Bear": [
+    "266"
+   ],
+   "Juxi": [
+    "283"
+   ],
+   "Miguan": [
+    "286"
+   ],
+   "Hema": [
+    "287"
+   ],
+   "Emo": [
+    "293"
+   ],
+   "Lion": [
+    "295"
+   ],
+   "Xiniu": [
+    "345"
+   ]
+  },
   "desc": "可被猎杀陷阱捕捉的 12 种动物：巢穴位置（物件 id 归一到物种）+ AI 追击半径",
   "source": "marooned_with_ed.db / 物资位置.json + 261030 libil2cpp.so 反汇编",
   "coordinateSystem": {
